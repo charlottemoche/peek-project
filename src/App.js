@@ -9,9 +9,15 @@ function App() {
 
   return (
       <div className="activity-container">
-        <div class="activity-card">
-          
-        </div>
+        {
+          activityListings.map(activity => {
+            return (
+              <div className="activity-card">
+                { activity.name }
+              </div>
+            )
+          })
+        }
       </div>
   );
 }
