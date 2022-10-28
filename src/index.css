@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  border-top: 4px solid #fff200;
   margin: 2em;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,7 +21,8 @@ h1 {
 
 .logo {
   max-width: 100px;
-  margin-top: -2em;
+  /* margin-top: -2em; */
+  margin-left: 5em;
 }
 .activity-container {
   text-align: center;
