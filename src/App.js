@@ -5,15 +5,13 @@ function App() {
 
   var activityListings = Activities.data.activities.results.entries;
 
-  console.log(JSON.stringify(activityListings));
-
   return (
       <div className="activity-container">
         {
           activityListings.map(activity => {
             return (
               <div className="activity-card">
-                { activity.name }
+                  { activity.name }
               </div>
             )
           })
