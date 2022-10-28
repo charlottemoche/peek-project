@@ -1,18 +1,22 @@
 import './App.css';
+import axios from 'axios'
 import Activities from './activities_page_1.json'
 
 function App() {
 
-  var activityListings = Activities.data.activities.results.entries;
-
+  const activityListings = Activities.data.activities.results.entries;
+  
   return (
-      <div className="activity-container">
+    <div className="activity-container">
         {
           activityListings.map(activity => {
-            return (
-              <div className="activity-card">
-                  { activity.name }
-              </div>
+            return ( 
+              <>
+              <p key={activity.name}>
+                {activity.name}
+              </p>
+              <img key={activity.images} className="img-card" src={activity.images[0]}></img>
+              </>
             )
           })
         }
