@@ -1,37 +1,27 @@
 import React, {useState, useEffect} from 'react'
 import './App.css';
-import axios from 'axios'
-import Activities from './activities_page_1.json'
+import ActivitiesOne from './activities_page_1.json';
+import ActivitiesTwo from './activities_page_2.json';
+import ActivitiesThree from './activities_page_3.json';
+import ActivitiesFour from './activities_page_4.json';
+import ActivitiesFive from './activities_page_5.json';
 import Card from 'react-bootstrap/Card';
 
 
 function App() {
+  
+  const activityListings = [ActivitiesOne.data.activities.results.entries, ActivitiesTwo.data.activities.results.entries, ActivitiesThree.data.activities.results.entries, ActivitiesFour.data.activities.results.entries, ActivitiesFive.data.activities.results.entries];
 
-  const activityListings = Activities.data.activities.results.entries;
-
-  // const [activities, setActivities] = useState([]);
-  // const [loading, setLoading] = useState(false)
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [activitiesPerPage, setActivitiesPerPage] = useState(20);
-
-  // useEffect(() => {
-  //   const fetchActivities = async () => {
-  //     setLoading(true);
-  //     const response = await axios.get('localhost:3000/activities_page_1.json');
-  //     setActivities(response.data);
-  //     setLoading(false);
-  //   }
-  //   fetchActivities();
-  // });
-
+  console.log(activityListings);
   
   return (
+
     <div className="activity-container">
         {
-          activityListings.map(activity => {
+          activityListings[0].map(activity => {
             return ( 
               <>
-               <Card style={{ width: '18rem' }}>
+               <Card style={{width: '18rem'}}>
                <Card.Img variant="top" src={activity.images[0]} />
                <Card.Body>
                <Card.Title>{activity.name}</Card.Title>

@@ -19,17 +19,27 @@ h1 {
 
 .logo {
   max-width: 100px;
+  margin-left: 8em;
 }
 
 /* NAVBAR */
 .navbar-static {
-  border-top: 4px solid #fff200;
+  border-top: 8px solid #fff200;
   margin-top: -5px;
   position: relative;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 4em;
+}
+
+.navbar-static p {
+  padding: 1.5em;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body > div.navbar-static > p:nth-child(3) {
+  margin-right: 8em;
 }
 
 .right-nav {
