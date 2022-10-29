@@ -9,26 +9,33 @@ import Card from 'react-bootstrap/Card';
 
 
 function App() {
-  
-  const activityListings = [ActivitiesOne.data.activities.results.entries, ActivitiesTwo.data.activities.results.entries, ActivitiesThree.data.activities.results.entries, ActivitiesFour.data.activities.results.entries, ActivitiesFive.data.activities.results.entries];
 
-  console.log(activityListings);
+  let fileOne = ActivitiesOne.data.activities.results.entries;
+  let fileTwo = ActivitiesTwo.data.activities.results.entries;
+  let fileThree = ActivitiesThree.data.activities.results.entries;
+  let fileFour = ActivitiesFour.data.activities.results.entries;
+  let fileFive = ActivitiesFive.data.activities.results.entries;
+  
+  const activityListings = [fileOne, fileTwo, fileThree, fileFour, fileFive];
   
   return (
 
-    <div className="activity-container">
+    <div className="activities-container">
+
         {
-          activityListings[0].map(activity => {
-            return ( 
-              <>
-               <Card style={{width: '18rem'}}>
-               <Card.Img variant="top" src={activity.images[0]} />
-               <Card.Body>
-               <Card.Title>{activity.name}</Card.Title>
-               </Card.Body>
-               </Card>
-              </>
-              
+          activityListings.map(activities => {
+            return activities.map(activity => {
+              return ( 
+                <>
+                <Card style={{width: '18rem'}}>
+                <Card.Img variant="top" src={activity.images[0]} />
+                <Card.Body>
+                <Card.Title>{activity.name}</Card.Title>
+                </Card.Body>
+                </Card>
+                </>
+                )
+              }  
             )
           })
         }
@@ -37,3 +44,14 @@ function App() {
 }
 
 export default App;
+
+// return ( 
+//   <>
+//    <Card style={{width: '18rem'}}>
+//    <Card.Img variant="top" src={activity.images[0]} />
+//    <Card.Body>
+//    <Card.Title>{activity.name}</Card.Title>
+//    </Card.Body>
+//    </Card>
+//   </>
+// )
