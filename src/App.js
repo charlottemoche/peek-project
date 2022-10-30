@@ -6,9 +6,6 @@ import ActivitiesThree from './activities_page_3.json';
 import ActivitiesFour from './activities_page_4.json';
 import ActivitiesFive from './activities_page_5.json';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
 
@@ -51,13 +48,3 @@ function App() {
 }
 
 export default App;
-
-
-{/* <>
-                <Card style={{width: '18rem'}}>
-                <Card.Img variant="top" src={activity.images[0]} />
-                <Card.Body>
-                <Card.Title>{activity.name}</Card.Title>
-                </Card.Body>
-                </Card>
-                </> */}

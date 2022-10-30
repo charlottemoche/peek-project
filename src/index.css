@@ -62,7 +62,7 @@ body > div.navbar-static > p:nth-child(3) {
 .activities-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 1em;
+  /* gap: .5em; */
   padding: 0 8em;
 }
 
@@ -73,7 +73,42 @@ body > div.navbar-static > p:nth-child(3) {
 }
 
 .card-img-top {
-  /* width: 100%; */
   height: 12vw;
   object-fit: cover;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1338px) {
+  .activities-container {
+    grid-template-columns: auto auto auto;
+  }
+
+  .card-title {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .activities-container {
+    grid-template-columns: auto auto;
+    padding: 1.5em;
+  }
+  .activity-container {
+    padding: 0 2em;
+  }
+  .activity-container h1 {
+    font-size: 24px;
+  }
+  .card-img-top {
+    height: 20vw;
+    object-fit: cover;
+  }
+  .logo {
+    max-width: 60px;
+    height: 100%;
+    margin-left: 2em;
+  }
+}
+
+/* MOBILE NAV */
