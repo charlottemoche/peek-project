@@ -1,5 +1,6 @@
 body {
-  margin: auto;
+  box-sizing: border-box;
+  display: block;
   background-color: white;
   /* margin: 2em; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,13 +21,13 @@ h1 {
 
 .logo {
   max-width: 100px;
-  margin-left: 8em;
+  margin-left: 16em;
 }
 
 /* NAVBAR */
+
 .navbar-static {
-  border-top: 8px solid #fff200;
-  margin-top: -5px;
+  border-top: 6px solid #fff200;
   position: relative;
   width: 100%;
   display: flex;
@@ -39,18 +40,33 @@ h1 {
   font-weight: 600;
 }
 
-body > div.navbar-static > p:nth-child(3) {
-  margin-right: 8em;
-}
-
 .right-nav {
   margin-left: auto;
+}
+
+.right-nav-2 {
+  margin-right: 15em;
+}
+
+/* MOBILE NAV */
+
+.fa-bars {
+  color: black;
+}
+
+.mobile-nav {
+  right: 0;
+  top: 0;
+  padding: 2em 3.2em;
+  display: block;
+  position: absolute;
+  visibility: hidden;
 }
 
 /* ACTIVITIES */
 
 .activity-container {
-  padding: 0 8em;
+  padding: 0 11em;
   margin-top: 3em;
 }
 
@@ -63,7 +79,7 @@ body > div.navbar-static > p:nth-child(3) {
   display: grid;
   grid-template-columns: auto auto auto auto;
   /* gap: .5em; */
-  padding: 0 8em;
+  padding: 0 10em;
 }
 
 /* CARDS */
@@ -77,38 +93,83 @@ body > div.navbar-static > p:nth-child(3) {
   object-fit: cover;
 }
 
+.card-title {
+  margin-top: 5px !important;
+}
+
 /* RESPONSIVE */
 
-@media screen and (max-width: 1338px) {
+@media (min-width: 1860px) and (max-width: 3000px) {
+  .activity-container {
+    padding: 0 16em;
+  }
+  .activities-container {
+    padding: 1em 15em;
+  }
+}
+
+@media screen and (max-width: 1860px) {
+  .logo {
+    margin-left: 11em;
+  }
+  .right-nav-2 {
+    margin-right: 10em;
+  }
   .activities-container {
     grid-template-columns: auto auto auto;
   }
 
   .card-title {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 950px) {
   .activities-container {
     grid-template-columns: auto auto;
-    padding: 1.5em;
+    padding: 1em 6em;
   }
   .activity-container {
-    padding: 0 2em;
+    padding: 0 7em;
   }
   .activity-container h1 {
     font-size: 24px;
   }
   .card-img-top {
-    height: 20vw;
+    height: 25vw;
     object-fit: cover;
   }
   .logo {
-    max-width: 60px;
+    max-width: 80px;
     height: 100%;
-    margin-left: 2em;
+    margin-left: 7em;
+  }
+  .right-nav-2 {
+    margin-right: 6em;
   }
 }
 
-/* MOBILE NAV */
+@media screen and (max-width: 580px) {
+  .activities-container {
+    padding: 1em 2em;
+  }
+  .activity-container {
+    padding: 0 3em;
+  }
+  .card-title {
+    font-size: 13px !important;
+  }
+  /* MOBILE NAV */
+  .right-nav {
+    display: none;
+  }
+  .right-nav-2 {
+    display: none;
+  }
+  .logo {
+    margin-left: 3em;
+  }
+  .mobile-nav {
+    visibility: visible;
+  }
+}
