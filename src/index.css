@@ -98,6 +98,20 @@ h1 {
   margin-top: 5px !important;
 }
 
+/* PAGINATION */
+
+.pagination {
+  justify-content: center;
+  padding: 3em;
+}
+
+/* FOOTER */
+#footer {
+  background: lightgray;
+  padding: 4em;
+}
+
+
 /* RESPONSIVE */
 
 @media (min-width: 1700px) and (max-width: 3000px) {

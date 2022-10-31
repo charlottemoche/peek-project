@@ -6,7 +6,6 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
   for (let i = 1; i < Math.ceil(totalActivities / activitiesPerPage); i++) {
     pageNumbers.push(i);
   }
-  
 
   return (
     <nav>
