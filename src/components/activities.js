@@ -24,9 +24,9 @@ export const Activities = ({ activityListings, loading }) => {
               <Card.Subtitle className="mb-2 text-muted">
                 {description.split(' ').slice(0, 12).join(' ') + ( " ...")}
                 </Card.Subtitle>
-              <Card.Text>
-                {activity.reviewMeta?.avgRating}
+                {Math.round(activity.reviewMeta?.avgRating * 100) / 100}
                 <br></br>
+              <Card.Text>
                 {activity.primaryRegion?.name}
               </Card.Text>                 
             </Card.Body>
