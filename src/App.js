@@ -5,8 +5,8 @@ import ActivitiesTwo from './activities_page_2.json';
 import ActivitiesThree from './activities_page_3.json';
 import ActivitiesFour from './activities_page_4.json';
 import ActivitiesFive from './activities_page_5.json';
-import "bootstrap/dist/css/bootstrap.min.css";
-import Card from 'react-bootstrap/Card';
+import { Activities } from './components/activities';
+import { Pagination } from './components/pagination';
 
 
 function App() {
@@ -17,33 +17,37 @@ function App() {
   let fileFour = ActivitiesFour.data.activities.results.entries;
   let fileFive = ActivitiesFive.data.activities.results.entries;
   
-  const activityListings = [fileOne, fileTwo, fileThree, fileFour, fileFive];
+  // PUT FILES INTO ONE OBJECT
+  let activityListings = [fileOne, fileTwo, fileThree, fileFour, fileFive].flat();
   
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [activitiesPerPage] = useState(20);
+  
+  useEffect(() => {
+    const fetchActivities = async () => {
+      setLoading(true);
+      const response = await (activityListings);
+      setActivities(response.data);
+      setLoading(false);
+    }
+    fetchActivities();
+  }, []);
+
+  // GET CURR POSTS
+  const indexOfLastActivity = currentPage * activitiesPerPage;
+  const indexOfFirstActivity = indexOfLastActivity - activitiesPerPage;
+  const currentActivities = activityListings.slice(indexOfFirstActivity, indexOfLastActivity);
+
+  // CHANGE PAGE
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
-
-    <div className="activities-container">
-
-        {
-          activityListings.map(activities => {
-            return activities.map(activity => {
-              return ( 
-                <Card key={activity.name}>
-                <Card.Body>
-                  <Card.Img variant="top" src={activity.images[0]} />
-                  <Card.Title>{activity.name}</Card.Title>
-                  {/* <Card.Subtitle className="mb-2 text-muted">{post.categories[0]}</Card.Subtitle> */}
-                  <Card.Text>
-                    {/* {parse(activity.excerpt.rendered)} */}
-                  </Card.Text>
-                  {/* <Card.Link href={post.link}>View post</Card.Link>                  */}
-                </Card.Body>
-                </Card>
-                )
-              }  
-            )
-          })
-        }
-      </div>
+    <div>
+      <Activities activityListings={currentActivities} loading={loading} />
+      <Pagination activitiesPerPage={activitiesPerPage} totalActivities={activityListings.length} paginate={paginate}/>
+    </div>
   );
 }
 
