@@ -19,26 +19,30 @@ function App() {
   
   // PUT FILES INTO ONE OBJECT
   let activityListings = [fileOne, fileTwo, fileThree, fileFour, fileFive].flat();
+
+  console.log(activityListings);
   
-  const [activities, setActivities] = useState([]);
+  const [activities, setActivities] = useState(activityListings);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [activitiesPerPage] = useState(20);
+  const activitiesPerPage = 20;
   
-  useEffect(() => {
-    const fetchActivities = async () => {
-      setLoading(true);
-      const response = await (activityListings);
-      setActivities(response.data);
-      setLoading(false);
-    }
-    fetchActivities();
-  }, []);
+  // const fetchActivities = async () => {
+  //   setLoading(true);
+  //   // normally would use await, but not necessary because I have the files and the data locally
+  //   const response = (activityListings);
+  //   setActivities(response.data);
+  //   setLoading(false);
+  // }
+
+  // useEffect(() => {
+  //   fetchActivities();
+  // }, activities);
 
   // GET CURR POSTS
   const indexOfLastActivity = currentPage * activitiesPerPage;
   const indexOfFirstActivity = indexOfLastActivity - activitiesPerPage;
-  const currentActivities = activityListings.slice(indexOfFirstActivity, indexOfLastActivity);
+  const currentActivities = activities.slice(indexOfFirstActivity, indexOfLastActivity);
 
   // CHANGE PAGE
   const paginate = (pageNumber) => setCurrentPage(pageNumber);

@@ -9,17 +9,26 @@ export const Activities = ({ activityListings, loading }) => {
   return (
     <div className="activities-container">
       {
-        activityListings.map(activity => {         
-          return ( 
+        activityListings.map(activity => { 
+
+          let description = activity.blurbs[1].value;
+
+          if (description.split(' ')[0] === "-") {
+            description = description.replace('-', '');
+          }
+          return (
             <Card key={activity.name}>
             <Card.Body>
               <Card.Img variant="top" src={activity.images[0]} />
               <Card.Title>{activity.name}</Card.Title>
-              {/* <Card.Subtitle className="mb-2 text-muted">{post.categories[0]}</Card.Subtitle> */}
+              <Card.Subtitle className="mb-2 text-muted">
+                {description.split(' ').slice(0, 12).join(' ') + ( " ...")}
+                </Card.Subtitle>
               <Card.Text>
-                {/* {parse(activity.excerpt.rendered)} */}
-              </Card.Text>
-              {/* <Card.Link href={post.link}>View post</Card.Link>                  */}
+                {activity.reviewMeta?.avgRating}
+                <br></br>
+                {activity.primaryRegion?.name}
+              </Card.Text>                 
             </Card.Body>
             </Card>
             )

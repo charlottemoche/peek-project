@@ -89,6 +89,7 @@ h1 {
 }
 
 .card-img-top {
+  border-radius: 10px !important;
   height: 12vw;
   object-fit: cover;
 }
