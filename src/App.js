@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import ActivitiesOne from './activities_page_1.json';
 import ActivitiesTwo from './activities_page_2.json';

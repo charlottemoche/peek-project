@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Carousel from 'react-bootstrap/Carousel';
 
 export const Activities = ({ activityListings, loading }) => {
 
@@ -12,10 +13,10 @@ export const Activities = ({ activityListings, loading }) => {
   
   return (
     <>
-    <div className="trending">
+    {/* <div className="trending">
       {
         // JUST MOCK IDEA WITH FIRST FIVE ACTIVITIES
-        
+
         trending.map(trendingActivity => {
           return (
             <Card key={trendingActivity.name}>
@@ -36,7 +37,7 @@ export const Activities = ({ activityListings, loading }) => {
           )
         })      
       }
-    </div>
+    </div> */}
     <div className="activity-detail">
       <img src="/peek-logo.png"></img>
       <h1>TITLE</h1>
