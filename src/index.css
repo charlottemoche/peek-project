@@ -58,6 +58,12 @@ h1 {
   margin-right: 15em;
 }
 
+/* TRENDING */
+.trending {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
 /* DETAILS */
 
 .activity-detail {

@@ -4,12 +4,39 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Activities = ({ activityListings, loading }) => {
 
+  let trending = activityListings.slice(0, 5);
+
   if (loading) {
     return <h1>Loading...</h1>;
   }
   
   return (
     <>
+    <div className="trending">
+      {
+        // JUST MOCK IDEA WITH FIRST FIVE ACTIVITIES
+        
+        trending.map(trendingActivity => {
+          return (
+            <Card key={trendingActivity.name}>
+              <Card.Body>
+              <>
+                <Card.Img variant="top" src={trendingActivity.images[0]} />
+              </>
+                <Card.Title>{trendingActivity.name}</Card.Title>
+                  <span className="rating"><i className="fa fa-star"></i>
+                  {Math.round(trendingActivity.reviewMeta?.avgRating * 100) / 100}
+                  </span>                 
+                  <br></br>
+                <Card.Text className="card-location">
+                  {trendingActivity.primaryRegion?.name}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          )
+        })      
+      }
+    </div>
     <div className="activity-detail">
       <img src="/peek-logo.png"></img>
       <h1>TITLE</h1>
