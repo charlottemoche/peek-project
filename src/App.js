@@ -25,19 +25,7 @@ function App() {
   const [activities, setActivities] = useState(activityListings);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const activitiesPerPage = 20;
-  
-  // const fetchActivities = async () => {
-  //   setLoading(true);
-  //   // normally would use await, but not necessary because I have the files and the data locally
-  //   const response = (activityListings);
-  //   setActivities(response.data);
-  //   setLoading(false);
-  // }
-
-  // useEffect(() => {
-  //   fetchActivities();
-  // }, activities);
+  const activitiesPerPage = 30;
 
   // GET CURR POSTS
   const indexOfLastActivity = currentPage * activitiesPerPage;

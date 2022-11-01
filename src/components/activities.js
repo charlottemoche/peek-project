@@ -22,13 +22,15 @@ export const Activities = ({ activityListings, loading }) => {
               <Card.Img variant="top" src={activity.images[0]} />
               <Card.Title>{activity.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                {description.split(' ').slice(0, 12).join(' ') + ( " ...")}
+                {description.split(' ').slice(0, 10).join(' ') + ( " ...")}
                 </Card.Subtitle>
+                <span className="rating"><i className="fa fa-star"></i>
                 {Math.round(activity.reviewMeta?.avgRating * 100) / 100}
+                </span>                 
                 <br></br>
-              <Card.Text>
+              <Card.Text className="card-location">
                 {activity.primaryRegion?.name}
-              </Card.Text>                 
+              </Card.Text>
             </Card.Body>
             </Card>
             )
