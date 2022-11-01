@@ -10,34 +10,27 @@ export const Activities = ({ activityListings, loading }) => {
   if (loading) {
     return <h1>Loading...</h1>;
   }
-  
+
   return (
     <>
-    {/* <div className="trending">
-      {
-        // JUST MOCK IDEA WITH FIRST FIVE ACTIVITIES
-
-        trending.map(trendingActivity => {
-          return (
-            <Card key={trendingActivity.name}>
-              <Card.Body>
-              <>
-                <Card.Img variant="top" src={trendingActivity.images[0]} />
-              </>
-                <Card.Title>{trendingActivity.name}</Card.Title>
-                  <span className="rating"><i className="fa fa-star"></i>
-                  {Math.round(trendingActivity.reviewMeta?.avgRating * 100) / 100}
-                  </span>                 
-                  <br></br>
-                <Card.Text className="card-location">
-                  {trendingActivity.primaryRegion?.name}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          )
-        })      
-      }
-    </div> */}
+    <div className="trending">
+      <h1>Trending</h1>
+      <Carousel>
+        {trending.map(trendingActivity => (
+          <Carousel.Item key={trendingActivity.name}>
+            <img
+              className="d-block w-100"
+              src={trendingActivity.images[0]}
+              alt=""
+            />
+            <Carousel.Caption>
+              <h3>{trendingActivity.name}</h3>
+              <p>{trendingActivity.primaryRegion?.name}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      </div>
     <div className="activity-detail">
       <img src="/peek-logo.png"></img>
       <h1>TITLE</h1>
@@ -82,9 +75,7 @@ export const Activities = ({ activityListings, loading }) => {
           return (
             <Card key={activity.name}>
               <Card.Body>
-              <>
                 <Card.Img variant="top" src={activity.images[0]} />
-              </>
                 <Card.Title>{activity.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   {description.split(' ').slice(0, 10).join(' ') + ( " ...")}
