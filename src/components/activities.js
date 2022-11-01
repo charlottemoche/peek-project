@@ -9,6 +9,39 @@ export const Activities = ({ activityListings, loading }) => {
   }
   
   return (
+    <>
+    <div className="activity-detail">
+      <img src="/peek-logo.png"></img>
+      <h1>TITLE</h1>
+      <i className="fa fa-star"></i>5
+      <p className="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <div className="info-box">
+        <ul>Lorem ipsum dolor sit amet</ul>
+        <ul>Lorem ipsum dolor sit amet</ul>
+        <ul>Lorem ipsum dolor sit amet</ul>
+      </div>
+      <div className="details">
+      <h2>
+        Highlights
+      </h2>
+      <p>
+        <li>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </li>
+        <li>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </li>
+        <li>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </li>
+      </p>
+      <h2>
+        What's Included
+      </h2>
+      </div>
+    </div>
     <div className="activities-container">
       {
         activityListings.map(activity => {         
@@ -41,6 +74,7 @@ export const Activities = ({ activityListings, loading }) => {
           }  
         )
       }
-  </div>
+    </div>
+  </>
   )
 }
