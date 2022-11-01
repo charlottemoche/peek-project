@@ -7,7 +7,7 @@ import ActivitiesFour from './activities_page_4.json';
 import ActivitiesFive from './activities_page_5.json';
 import { Activities } from './components/activities';
 import { Pagination } from './components/pagination';
-
+import { Detail } from './components/detail';
 
 function App() {
 
@@ -19,13 +19,11 @@ function App() {
   
   // PUT FILES INTO ONE OBJECT
   let activityListings = [fileOne, fileTwo, fileThree, fileFour, fileFive].flat();
-
-  console.log(activityListings);
   
   const [activities, setActivities] = useState(activityListings);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const activitiesPerPage = 30;
+  const activitiesPerPage = 28;
 
   // GET CURR POSTS
   const indexOfLastActivity = currentPage * activitiesPerPage;
@@ -42,5 +40,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
