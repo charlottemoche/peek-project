@@ -222,7 +222,6 @@ h1 {
 /* CATEGORIES */
 
 .categories {
-  /* background-color: rgba(244, 243, 240, 0.76); */
   text-align: center;
   padding: 4em 10em;
 }
@@ -231,6 +230,10 @@ h1 {
   color: #1d7e89;
   max-width: 80px;
   padding: 0 20px;
+}
+
+.categories img:hover {
+  opacity: .3;
 }
 
 /* ACTIVITIES */
