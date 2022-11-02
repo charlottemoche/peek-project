@@ -64,6 +64,18 @@ export const Activities = ({ activityListings, loading }) => {
       </h2>
       </div>
     </div> */}
+    <div className="categories">
+        <span>
+        <img src="/hiker.svg"></img>
+        <img src="/mountain.svg"></img>
+        <img src="/water.svg"></img>
+        <img src="/city.svg"></img>
+        <img src="/food.svg"></img>
+        <img src="/boat.svg"></img>
+        <img src="/crafts.svg"></img>
+        </span>
+
+    </div>
     <div className="activities-container">
       {
         activityListings.map(activity => {         

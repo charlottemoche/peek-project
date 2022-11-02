@@ -26,6 +26,7 @@ h1 {
 
 .fa-star {
   margin-right: 5px;
+  color: #1d7e89;
 }
 
 .rating {
@@ -139,6 +140,19 @@ h1 {
   visibility: hidden;
 }
 
+/* CATEGORIES */
+
+.categories {
+  text-align: center;
+  padding: 4em 10em;
+}
+
+.categories img {
+  color: #1d7e89;
+  max-width: 80px;
+  padding: 0 20px;
+}
+
 /* ACTIVITIES */
 
 .activity-container {
@@ -152,6 +166,7 @@ h1 {
 }
 
 .activities-container {
+  margin-top: 1em;
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 1em;
