@@ -14,7 +14,8 @@ export const Activities = ({ activityListings, loading }) => {
   return (
     <>
     <div className="trending">
-      <h1>Trending</h1>
+      <h1>Top 10 Things To Do Right Now</h1>
+      <p>Don't go home without crossing out these experiences off your bucket list</p>
       <Carousel>
         {trending.map(trendingActivity => (
           <Carousel.Item key={trendingActivity.name}>
