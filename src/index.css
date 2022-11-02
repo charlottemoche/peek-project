@@ -99,7 +99,8 @@ h1 {
   position: static !important;
   top: 1em !important;
   background-color: rgba(255, 255, 255, 0.76);
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .carousel-indicators {
@@ -264,7 +265,7 @@ h1 {
     font-size: 18px !important;
   }
   .trending {
-    padding: 0 18em;
+    padding: 1em 18em;
   }
 }
 
@@ -292,7 +293,7 @@ h1 {
     margin-right: 6em;
   }
   .trending {
-    padding: 0 10em;
+    padding: 1em 10em;
   }
 }
 
@@ -329,7 +330,7 @@ h1 {
     visibility: visible;
   }
   .trending {
-    padding: 0 2em;
+    padding: .5em 2em;
   }
   .trending h1 {
     font-size: 24px;
