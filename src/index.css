@@ -300,7 +300,7 @@ h1 {
     margin-right: 6em;
   }
   .trending {
-    padding: 1em 10em;
+    padding: 1em 5em;
   }
   .categories {
     padding: 1em;
@@ -344,10 +344,11 @@ h1 {
     visibility: visible;
   }
   .trending {
-    padding: .5em 2em;
+    padding: .5em 1em;
   }
   .trending h1 {
-    font-size: 24px;
+    margin-top: 10px;
+    font-size: 22px;
   }
   .trending h2 {
     font-size: 16px;
