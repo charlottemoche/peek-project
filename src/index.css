@@ -65,7 +65,7 @@ h1 {
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 0 11em;
-  margin-right: 10px;
+
 }
 
 .trending img {
@@ -74,15 +74,19 @@ h1 {
   height: 30vw;
 }
 
-.trending h3 {
-  top: 20px;
-  right: 30px;
-  font-weight: 600;
-  text-shadow: 1px 1px black;
+.trending h2 {
+  max-width: 100%;
+  font-weight: 800;
+  text-shadow: 2px 2px black;
 }
 
 .trending p {
+  font-weight: 500;
+}
+
+.trending h3 {
   font-weight: 600;
+  text-shadow: 2px 2px black;
 }
 
 /* DETAILS */

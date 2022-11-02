@@ -25,8 +25,8 @@ export const Activities = ({ activityListings, loading }) => {
               alt=""
             />
             <Carousel.Caption>
-              <h3>{trendingActivity.name}</h3>
-              <p>{trendingActivity.primaryRegion?.name}</p>
+              <h2>{trendingActivity.name}</h2>
+              <h3>{trendingActivity.primaryRegion?.name}</h3>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
