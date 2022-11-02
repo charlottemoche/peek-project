@@ -13,6 +13,7 @@ export const Activities = ({ activityListings, loading }) => {
 
   return (
     <>
+    {/* // IDEALLY WILL ONLY SHOW UP ON FIRST PAGE */}
     <div className="trending">
       <h1>Top 5 Things To Do Right Now</h1>
       <p>Don't go home without crossing out these experiences off your bucket list</p>
@@ -121,6 +122,7 @@ export const Activities = ({ activityListings, loading }) => {
 
 
     <div className="categories">
+      {/* // HOVER TO SHOW CLICKABLE */}
         <span>
         <img src="/hiker.svg"></img>
         <img src="/mountain.svg"></img>
