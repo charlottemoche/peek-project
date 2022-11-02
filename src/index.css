@@ -302,6 +302,13 @@ h1 {
   .trending {
     padding: 1em 10em;
   }
+  .categories {
+    padding: 1em;
+  }
+  .categories img {
+    max-width: 60px;
+    padding: 1em;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -351,5 +358,9 @@ h1 {
   .trending img {
     height: 30vw;
     padding: 0 2em;
+  }
+  .categories img {
+    max-width: 40px;
+    padding: .5em;
   }
 }
