@@ -78,16 +78,23 @@ h1 {
   height: 25vw;
 }
 
+.trending p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.trending h1 {
+  color: #076add;
+  font-weight: 700;
+}
+
 .trending h2 {
   max-width: 100%;
   color: black;
   font-size: 24px;
-  font-weight: 400;
-}
-
-.trending p {
   font-weight: 500;
 }
+
 
 .trending h3 {
   color: black;
