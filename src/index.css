@@ -102,6 +102,10 @@ h1 {
   font-weight: 400;
 }
 
+.carousel {
+  padding: 0 5em !important;
+}
+
 .carousel-caption {
   position: static !important;
   top: 1em !important;
@@ -114,7 +118,19 @@ h1 {
   bottom: 7em !important;
 }
 
+.carousel-control-next {
+  margin-right: 3em !important;
+}
+
+.carousel-control-prev {
+  margin-left: 3em !important;
+}
+
 .carousel-control-next-icon {
+  top: 1em !important;
+}
+
+.carousel-control-prev-icon {
   top: 1em !important;
 }
 
@@ -291,15 +307,6 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1700px) {
-  .logo {
-    margin-left: 11em;
-  }
-  .right-nav-2 {
-    margin-right: 10em;
-  }
-}
-
 @media screen and (max-width: 1406px) {
   .logo {
     margin-left: 11em;
@@ -354,6 +361,9 @@ h1 {
   .activity-detail {
     margin: 1em 9em;
   }
+  .carousel {
+    padding: 0 3em !important;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -375,7 +385,6 @@ h1 {
   .mb-2 {
     font-size: 14px !important;
   }
-  /* MOBILE NAV */
   .right-nav {
     display: none;
   }
@@ -405,14 +414,22 @@ h1 {
     height: 30vw;
     padding: 0 2em;
   }
+  .carousel {
+    padding: 0 1em !important;
+  }
   .carousel-caption {
     margin: 0 2em !important;
   }
   .carousel-control-prev {
-    margin-left: 1em !important;
+    margin-bottom: 4em;
+    margin-left: 2em !important;
   }
   .carousel-control-next {
-    margin-right: 1em !important;
+    margin-bottom: 4em;
+    margin-right: 2em !important;
+  }
+  .carousel-indicators {
+    bottom: 9em;
   }
   .categories img {
     max-width: 40px;
