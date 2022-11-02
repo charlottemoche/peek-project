@@ -62,16 +62,17 @@ h1 {
 /* TRENDING */
 
 .trending {
+  background-color: rgba(244, 243, 240, 0.76);
   position: relative;
   text-align: center;
   width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 0 18em;
-
+  padding: 1em 18em 2em;
 }
 
 .trending img {
+  border-radius: 5px;
   align-items: center;
   object-fit: cover;
   height: 25vw;
@@ -79,8 +80,9 @@ h1 {
 
 .trending h2 {
   max-width: 100%;
-  font-weight: 800;
-  text-shadow: 2px 2px black;
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .trending p {
@@ -88,8 +90,20 @@ h1 {
 }
 
 .trending h3 {
-  font-weight: 600;
-  text-shadow: 2px 2px black;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.carousel-caption {
+  position: static !important;
+  top: 1em !important;
+  background-color: rgba(255, 255, 255, 0.76);
+  border-radius: 10px;
+}
+
+.carousel-indicators {
+  bottom: 7em !important;
 }
 
 /* DETAILS */
