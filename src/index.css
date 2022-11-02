@@ -114,10 +114,13 @@ h1 {
   bottom: 7em !important;
 }
 
+.carousel-control-next-icon {
+  top: 1em !important;
+}
+
 /* DETAILS */
 
 .activity-detail {
-  grid-template-columns: auto auto;
   margin: 1em 11em;
 }
 
@@ -309,6 +312,12 @@ h1 {
     max-width: 60px;
     padding: 1em;
   }
+  .activity-detail {
+    margin: 1em 9em;
+  }
+  .details li {
+    line-height: 2;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -360,8 +369,20 @@ h1 {
     height: 30vw;
     padding: 0 2em;
   }
+  .carousel-caption {
+    margin: 0 2em !important;
+  }
+  .carousel-control-prev {
+    margin-left: 1em !important;
+  }
+  .carousel-control-next {
+    margin-right: 1em !important;
+  }
   .categories img {
     max-width: 40px;
     padding: .5em;
+  }
+  .activity-detail {
+    margin: 1em 3.5em;
   }
 }
