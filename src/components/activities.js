@@ -32,7 +32,7 @@ export const Activities = ({ activityListings, loading }) => {
         ))}
       </Carousel>
       </div>
-    <div className="activity-detail">
+    {/* <div className="activity-detail">
       <img src="/peek-logo.png"></img>
       <h1>TITLE</h1>
       <i className="fa fa-star"></i>5
@@ -63,7 +63,7 @@ export const Activities = ({ activityListings, loading }) => {
         What's Included
       </h2>
       </div>
-    </div>
+    </div> */}
     <div className="activities-container">
       {
         activityListings.map(activity => {         

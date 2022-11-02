@@ -59,8 +59,10 @@ h1 {
 }
 
 /* TRENDING */
+
 .trending {
   position: relative;
+  text-align: center;
   width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -311,5 +313,6 @@ h1 {
   }
   .trending img {
     height: 30vw;
+    padding: 0 2em;
   }
 }
