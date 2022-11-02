@@ -64,14 +64,14 @@ h1 {
   width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 0 11em;
+  padding: 0 18em;
 
 }
 
 .trending img {
   align-items: center;
   object-fit: cover;
-  height: 30vw;
+  height: 25vw;
 }
 
 .trending h2 {
@@ -232,9 +232,12 @@ h1 {
   .card-title {
     font-size: 18px !important;
   }
+  .trending {
+    padding: 0 18em;
+  }
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1140px) {
   .activities-container {
     grid-template-columns: auto auto;
     padding: 1em 6em;
@@ -256,6 +259,9 @@ h1 {
   }
   .right-nav-2 {
     margin-right: 6em;
+  }
+  .trending {
+    padding: 0 10em;
   }
 }
 
@@ -290,5 +296,20 @@ h1 {
   }
   .mobile-nav {
     visibility: visible;
+  }
+  .trending {
+    padding: 0 2em;
+  }
+  .trending h1 {
+    font-size: 24px;
+  }
+  .trending h2 {
+    font-size: 16px;
+  }
+  .trending h3 {
+    font-size: 12px;
+  }
+  .trending img {
+    height: 30vw;
   }
 }
