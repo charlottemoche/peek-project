@@ -2,17 +2,15 @@ import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from 'react-bootstrap/Carousel';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useEffect } from "react-router-dom";
 
 export const Activities = ({ activityListings, loading }) => {
 
   let navigate = useNavigate();
-  const routeChange = (activity) =>{
-    localStorage.setItem("activity", JSON.stringify(activity)); 
-    let path = `/detail/`;
-    navigate(path);
-    window.scrollTo(0, 0, 'auto');
+  const getActivity = (activity) => {
+    navigate(`/detail/`, { state: { activity: activity} });
   }
+
 
   let trending = activityListings.slice(0, 5);
 
@@ -30,7 +28,7 @@ export const Activities = ({ activityListings, loading }) => {
           <Carousel.Item key={trendingActivity.name}>
             <img
               className="d-block w-100"
-              onClick={() => routeChange(trendingActivity)}
+              onClick={() => getActivity(trendingActivity)}
               src={trendingActivity.images[0]}
               alt=""
             />
@@ -68,7 +66,7 @@ export const Activities = ({ activityListings, loading }) => {
           return (
             <Card key={activity.name}>
               <Card.Body>
-                <Card.Img variant="top" onClick={() => routeChange(activity)} src={activity.images[0]} />
+                <Card.Img variant="top" onClick={() => getActivity(activity)} src={activity.images[0]} />
                 <Card.Title>{activity.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   {description.split(' ').slice(0, 10).join(' ') + ( " ...")}

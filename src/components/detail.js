@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Detail = () => {
-
-  // IDEALLY STORE EVERYTHING LOCALLY AND ACCESS BETWEEN PAGES
-  const [activity, setActivity] = useState(JSON.parse(localStorage.getItem("activity")));
 
   let navigate = useNavigate();
   const routeChange = () =>{
@@ -12,6 +9,9 @@ export const Detail = () => {
     navigate(path);
     window.scrollTo(0, 0, 'auto');
   }
+
+  const { state: { activity } = {} } = useLocation();
+  // console.log(activity);
   
   let duration = activity.durationMinutesMax;
   function time(n) {
@@ -29,7 +29,7 @@ export const Detail = () => {
     return timeS;
   }
 
-  const highlights = activity.blurbs[2].value;
+  let highlights = activity.blurbs[2].value;
 
   return (
     <div>
