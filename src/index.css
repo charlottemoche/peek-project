@@ -185,6 +185,10 @@ h1 {
   margin-bottom: .5em;
 }
 
+.highlights {
+  margin-bottom: 10px;
+}
+
 .activity-detail-container {
   display: grid;
   grid-template-columns: 1.3fr 1fr;

@@ -12,6 +12,24 @@ export const Detail = () => {
     navigate(path);
     window.scrollTo(0, 0, 'auto');
   }
+  
+  let duration = activity.durationMinutesMax;
+  function time(n) {
+    let num = n;
+    let timeS = "";
+    let hours = (num / 60);
+    let rhours = Math.floor(hours);
+    let minutes = (hours - rhours) * 60;
+    let rminutes = Math.round(minutes);
+    if (num % 60 !== 0) {
+      timeS = rhours + " hr and " + rminutes + " min";
+    } else {
+      timeS = rhours + " hr"
+    }
+    return timeS;
+  }
+
+  const highlights = activity.blurbs[2].value;
 
   return (
     <div>
@@ -29,24 +47,20 @@ export const Detail = () => {
             {activity.blurbs[1].value}
           </p>
           <div className="info-box">
-            <ul>Lorem ipsum dolor sit amet</ul>
-            <ul>Lorem ipsum dolor sit amet</ul>
-            <ul>Lorem ipsum dolor sit amet</ul>
+            <ul>Duration: {time(duration)}</ul>
+            <ul>Cancellation: {activity.blurbs[0].value}</ul>
           </div>
           <div className="details">
             <h3>
               Highlights
             </h3>
             <p>
-              <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </li>
-              <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </li>
-              <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </li>
+            {highlights.split("\n").map((i, key) => {
+            if (i.split(' ')[0] === "-") {
+              i = i.replace('-', '');
+            }
+            return <li className="highlights" key={key}>{i}</li>
+            })}
             </p>
             </div>
           <img src="/map-placeholder.png"></img>
