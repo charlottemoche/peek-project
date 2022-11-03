@@ -88,7 +88,12 @@ export const Detail = () => {
               To Know
             </h3>
             <p>
-            {toKnow}
+            {toKnow.split("\n").map((i, key) => {
+            if (i.split(' ')[0] === "-") {
+              i = i.replace('-', '');
+            }
+            return <li className="highlights" key={key}>{i}</li>
+            })}
             </p>
             </div>
           <img src="/map-placeholder.png"></img>
