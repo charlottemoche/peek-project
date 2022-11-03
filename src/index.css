@@ -152,13 +152,13 @@ h1 {
   margin-bottom: .5em;
 }
 
-.activity-detail a {
+.activity-detail-back {
   margin-left: 1em;
   font-weight: 500;
   color: #076add !important;
 }
 
-.activity-detail a:hover {
+.activity-detail-back:hover {
   font-weight: 800;
 }
 

@@ -17,7 +17,7 @@ export const Detail = () => {
     <div>
       <>
       <div className="activity-detail">
-          <a onClick={routeChange}>Back to Activities</a>
+        <p className="activity-detail-back" onClick={routeChange}>Back to Activities</p>
         <div className="activity-detail-container">
         <div className="activity-detail-1">
           <img src={activity.images[0]}></img>
