@@ -34,9 +34,9 @@ export const Detail = () => {
             <ul>Lorem ipsum dolor sit amet</ul>
           </div>
           <div className="details">
-            <h2>
+            <h3>
               Highlights
-            </h2>
+            </h3>
             <p>
               <li>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -48,15 +48,12 @@ export const Detail = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               </li>
             </p>
-            <h2>
-              What's Included
-            </h2>
             </div>
           <img src="/map-placeholder.png"></img>
         </div>
 
         <div className="activity-detail-2">
-          <img className="calendar" src="/calendar-placeholder.png"></img>
+          {/* <img className="calendar" src="/calendar-placeholder.png"></img> */}
         </div>
         </div>
       </div> 
