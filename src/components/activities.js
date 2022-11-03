@@ -9,6 +9,7 @@ export const Activities = ({ activityListings, loading }) => {
   let navigate = useNavigate();
   const getActivity = (activity) => {
     navigate(`/detail/`, { state: { activity: activity} });
+    window.scrollTo(0, 0, 'auto');
   }
 
 

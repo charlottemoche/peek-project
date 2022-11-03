@@ -37,7 +37,7 @@ export const Detail = () => {
     <div>
       <>
       <div className="activity-detail">
-        <p className="activity-detail-back" onClick={routeChange}>Back to Activities</p>
+        <button className="activity-detail-back" onClick={routeChange}>Back to Activities</button>
         <div className="activity-detail-container">
         <div className="activity-detail-1">
           <img src={activity.images[0]}></img>
@@ -75,16 +75,15 @@ export const Detail = () => {
             <h3>
               Included
             </h3>
-            <p>
+            <div>
             {included.split("\n").map((i, key) => {
             if (i.split(' ')[0] === "-") {
               i = i.replace('-', '');
             }
             return <p key={key}>&#10004; &nbsp; {i}</p>
             })}
-            </p>
             </div>
-
+            </div>
             <h3>
               To Know
             </h3>
