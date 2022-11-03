@@ -1,9 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from 'react-bootstrap/Carousel';
+import { useNavigate } from "react-router-dom";
 
 export const Activities = ({ activityListings, loading }) => {
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/detail/`; 
+    navigate(path);
+    window.scrollTo(0, 0, 'auto');
+  }
 
   let trending = activityListings.slice(0, 5);
 
@@ -22,6 +30,7 @@ export const Activities = ({ activityListings, loading }) => {
           <Carousel.Item key={trendingActivity.name}>
             <img
               className="d-block w-100"
+              onClick={routeChange}
               src={trendingActivity.images[0]}
               alt=""
             />
@@ -33,92 +42,6 @@ export const Activities = ({ activityListings, loading }) => {
         ))}
       </Carousel>
       </div>
-
-
-
-
-
-      {/* <div className="activity-detail">
-        <div className="activity-detail-container">
-        <div className="activity-detail-1">
-          <img src="/peek-logo.png"></img>
-          <h1>TITLE</h1>
-          <i className="fa fa-star"></i>5
-          <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <div className="info-box">
-            <ul>Lorem ipsum dolor sit amet</ul>
-            <ul>Lorem ipsum dolor sit amet</ul>
-            <ul>Lorem ipsum dolor sit amet</ul>
-          </div>
-          <div className="details">
-            <h2>
-              Highlights
-            </h2>
-            <p>
-              <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </li>
-              <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </li>
-              <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </li>
-            </p>
-            <h2>
-              What's Included
-            </h2>
-            </div>
-          <img src="/map-placeholder.png"></img>
-        </div>
-
-        <div className="activity-detail-2">
-          <img className="calendar" src="/calendar-placeholder.png"></img>
-        </div>
-        </div>
-      </div>  */}
-
-
-
-{/* 
-      <img src="/peek-logo.png"></img>
-      <h1>TITLE</h1>
-      <i className="fa fa-star"></i>5
-      <p className="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <div className="info-box">
-        <ul>Lorem ipsum dolor sit amet</ul>
-        <ul>Lorem ipsum dolor sit amet</ul>
-        <ul>Lorem ipsum dolor sit amet</ul>
-      </div>
-      <div className="details">
-      <h2>
-        Highlights
-      </h2>
-      <p>
-        <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        </li>
-        <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        </li>
-        <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        </li>
-      </p>
-      <h2>
-        What's Included
-      </h2>
-      </div>*/}
-    
-    
-
-
-
-
 
 
     <div className="categories">
@@ -146,7 +69,7 @@ export const Activities = ({ activityListings, loading }) => {
           return (
             <Card key={activity.name}>
               <Card.Body>
-                <Card.Img variant="top" src={activity.images[0]} />
+                <Card.Img variant="top" onClick={routeChange} src={activity.images[0]} />
                 <Card.Title>{activity.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   {description.split(' ').slice(0, 10).join(' ') + ( " ...")}
