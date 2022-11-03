@@ -169,7 +169,14 @@ h1 {
 
 .info-box {
   background-color: rgba(244, 243, 240, 0.76);
-  padding: 2em 1em;
+  padding: 2em 2em;
+  margin-bottom: 3em;
+}
+
+.info-box img {
+  max-width: 15px !important;
+  margin-right: 10px; 
+  margin-bottom: 0; 
 }
 
 .details {
@@ -189,6 +196,14 @@ h1 {
   margin-bottom: 10px;
 }
 
+.highlights-box {
+  margin-bottom: 3em;
+}
+
+.highlights-box h3 {
+  margin-top: 0 !important;
+}
+
 .activity-detail-container {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -205,21 +220,14 @@ h1 {
 }
 
 .activity-detail-2 {
+  margin-top: 1em;
   padding: 1em;
+  background-color: rgba(244, 243, 240, 0.76);
 }
 
 .activity-detail-2 img {
   max-width:100%;
   max-height:100%;
-}
-
-.calendar {
-  margin-bottom: 3em !important;
-  /* position: fixed;
-  padding: 2em;
-  left: 75%;
-  top: 0%;
-  transform: translateX(-50%); */
 }
 
 /* MOBILE NAV */
@@ -384,6 +392,9 @@ h1 {
   }
   .carousel {
     padding: 0 3em !important;
+  }
+  .activity-detail-container {
+    display: block;
   }
 }
 

@@ -30,6 +30,8 @@ export const Detail = () => {
   }
 
   let highlights = activity.blurbs[2].value;
+  let included = activity.blurbs[3].value;
+  let toKnow = activity.blurbs[4].value;
 
   return (
     <div>
@@ -47,10 +49,15 @@ export const Detail = () => {
             {activity.blurbs[1].value}
           </p>
           <div className="info-box">
-            <ul>Duration: {time(duration)}</ul>
-            <ul>Cancellation: {activity.blurbs[0].value}</ul>
+            <span>
+              <ul><img src="/clock.svg" /><b>Duration:</b> {time(duration)}</ul>
+            </span>
+            <span>
+            <ul><img src="/cancel.svg"/><b>Cancellation:</b> {activity.blurbs[0].value}</ul>
+            </span>
           </div>
           <div className="details">
+            <div className="highlights-box">
             <h3>
               Highlights
             </h3>
@@ -63,11 +70,33 @@ export const Detail = () => {
             })}
             </p>
             </div>
+            <div className="info-box">
+              
+            <h3>
+              Included
+            </h3>
+            <p>
+            {included.split("\n").map((i, key) => {
+            if (i.split(' ')[0] === "-") {
+              i = i.replace('-', '');
+            }
+            return <p key={key}>&#10004; &nbsp; {i}</p>
+            })}
+            </p>
+            </div>
+
+            <h3>
+              To Know
+            </h3>
+            <p>
+            {toKnow}
+            </p>
+            </div>
           <img src="/map-placeholder.png"></img>
         </div>
 
         <div className="activity-detail-2">
-          {/* <img className="calendar" src="/calendar-placeholder.png"></img> */}
+          CALENDAR PLACEHOLDER
         </div>
         </div>
       </div> 
