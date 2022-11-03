@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 export const Detail = () => {
+
+  // IDEALLY STORE EVERYTHING LOCALLY AND ACCESS BETWEEN PAGES
+  const [activity, setActivity] = useState(JSON.parse(localStorage.getItem("activity")));
+
   return (
     <div>
       <>
       <div className="activity-detail">
         <div className="activity-detail-container">
         <div className="activity-detail-1">
-          <img src="/peek-logo.png"></img>
-          <h1>TITLE</h1>
+          <img src={activity.images[0]}></img>
+          <h1>
+            {activity.name}
+          </h1>
           <i className="fa fa-star"></i>5
           <p className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            {activity.blurbs[1].value}
           </p>
           <div className="info-box">
             <ul>Lorem ipsum dolor sit amet</ul>
