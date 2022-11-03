@@ -7,12 +7,17 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
     pageNumbers.push(i);
   }
 
+  function scroll(number) {
+    paginate(number);
+    window.scrollTo(0, document.body.scrollHeight / 3);
+  }
+
   return (
     <nav>
       <ul className="pagination">
         {pageNumbers.map(number => (
           <li key={number} className="page-item">
-            <a onClick={() => paginate(number)} href="!#" className="page-link">
+            <a onClick={() => scroll(number)} href="#" className="page-link">
               {number}
             </a>
           </li>
