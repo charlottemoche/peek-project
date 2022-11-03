@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export const Detail = () => {
 
   // IDEALLY STORE EVERYTHING LOCALLY AND ACCESS BETWEEN PAGES
   const [activity, setActivity] = useState(JSON.parse(localStorage.getItem("activity")));
 
+  let navigate = useNavigate();
+  const routeChange = () =>{
+    let path = `/`;
+    navigate(path);
+    window.scrollTo(0, 0, 'auto');
+  }
+
   return (
     <div>
       <>
       <div className="activity-detail">
+          <a onClick={routeChange}>Back to Activities</a>
         <div className="activity-detail-container">
         <div className="activity-detail-1">
           <img src={activity.images[0]}></img>
-          <h1>
+          <h2>
             {activity.name}
-          </h1>
+          </h2>
           <i className="fa fa-star"></i>5
           <p className="description">
             {activity.blurbs[1].value}

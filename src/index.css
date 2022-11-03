@@ -21,7 +21,7 @@ h1 {
 
 .logo {
   max-width: 100px;
-  margin-left: 16em;
+  margin-left: 10em;
 }
 
 .fa-star {
@@ -56,7 +56,7 @@ h1 {
 }
 
 .right-nav-2 {
-  margin-right: 15em;
+  margin-right: 10em;
 }
 
 /* TRENDING */
@@ -137,15 +137,25 @@ h1 {
 /* DETAILS */
 
 .activity-detail {
-  margin: 1em 11em;
+  margin: 5em 9em;
 }
 
-.activity-detail h1 {
+.activity-detail h2 {
   margin-top: .5em;
 }
 
 .activity-detail img {
   margin-bottom: .5em;
+}
+
+.activity-detail a {
+  margin-left: 1em;
+  font-weight: 500;
+  color: #076add !important;
+}
+
+.activity-detail a:hover {
+  font-weight: 800;
 }
 
 .description {
