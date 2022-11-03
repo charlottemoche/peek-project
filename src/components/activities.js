@@ -12,8 +12,6 @@ export const Activities = ({ activityListings, loading }) => {
     let path = `/detail/`;
     navigate(path);
     window.scrollTo(0, 0, 'auto');
-    return {
-    }
   }
 
   let trending = activityListings.slice(0, 5);
@@ -33,7 +31,7 @@ export const Activities = ({ activityListings, loading }) => {
           <Carousel.Item key={trendingActivity.name}>
             <img
               className="d-block w-100"
-              onClick={routeChange}
+              onClick={() => routeChange(trendingActivity)}
               src={trendingActivity.images[0]}
               alt=""
             />

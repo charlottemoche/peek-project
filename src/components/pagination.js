@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 
 export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
+
   const pageNumbers = [];
   for (let i = 1; i < Math.ceil(totalActivities / activitiesPerPage); i++) {
     pageNumbers.push(i);
@@ -9,7 +10,7 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
 
   function scroll(number) {
     paginate(number);
-    window.scrollTo(0, document.body.scrollHeight / 3);
+    window.scrollTo(0, 0, 'auto');
   }
 
   return (

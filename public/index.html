@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="navbar-static">
-      <img class="logo" src="./peek-logo.png" alt="" />
+      <img id="homepage" class="logo" src="./peek-logo.png" alt="" />
       <p class="right-nav">Products</p>
       <p class="right-nav-2">Log In / Sign Up</p>
     </div>
@@ -35,3 +35,8 @@
     </div>
   </body>
 </html>
+<script type="text/javascript">
+  document.getElementById("homepage").onclick = function () {
+      location.href = "/";
+  };
+</script>
