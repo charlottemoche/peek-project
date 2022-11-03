@@ -10,7 +10,9 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
 
   function scroll(number) {
     paginate(number);
-    window.scrollTo(0, 0, 'auto');
+    setTimeout(function () {
+      window.scrollTo(0, 600);
+    }, 2);
   }
 
   return (

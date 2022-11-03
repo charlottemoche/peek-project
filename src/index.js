@@ -15,7 +15,6 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="/detail" element={<Detail />} />
-          {/*<Route path="*" element={<NoPage />} /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

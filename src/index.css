@@ -249,7 +249,7 @@ h1 {
 
 .categories {
   text-align: center;
-  padding: 4em 10em;
+  padding: 3em 10em;
 }
 
 .categories img {
@@ -265,12 +265,14 @@ h1 {
 /* ACTIVITIES */
 
 .activity-container {
+  text-align: center;
   padding: 0 11em;
   margin-top: 3em;
+  
 }
 
 .activity-container h1 {
-  font-size: 32px;
+  color: #076add;
   font-weight: 600;
 }
 

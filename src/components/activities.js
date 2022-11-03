@@ -41,6 +41,9 @@ export const Activities = ({ activityListings, loading }) => {
       </Carousel>
       </div>
 
+      <div className="activity-container">
+      <h1>Activities</h1>
+      </div>
 
     <div className="categories">
         <span>
@@ -54,6 +57,7 @@ export const Activities = ({ activityListings, loading }) => {
         </span>
 
     </div>
+
     <div className="activities-container">
       {
         activityListings.map(activity => {         
