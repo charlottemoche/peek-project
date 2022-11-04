@@ -7,6 +7,7 @@ import ActivitiesFour from './activities_page_4.json';
 import ActivitiesFive from './activities_page_5.json';
 import { Activities } from './components/activities';
 import { Pagination } from './components/pagination';
+import { Navigation } from './components/navigation';
 
 function App() {
 
@@ -34,8 +35,8 @@ function App() {
 
   return (
     <>
-    {/* <Navbar /> */}
     <div>
+      <Navigation />
       <Activities activityListings={currentActivities} loading={loading} />
       <Pagination activitiesPerPage={activitiesPerPage} totalActivities={activityListings.length} paginate={paginate}/>
     </div>
