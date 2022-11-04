@@ -64,7 +64,7 @@ export const Activities = ({ activityListings, loading }) => {
       {
         activityListings.map(activity => {         
          
-          let description = activity.blurbs[1].value;
+          let description = activity.blurbs.find(e => e.key === "DESCRIPTION").value;
 
           if (description.split(' ')[0] === "-") {
             description = description.replace('-', '');
