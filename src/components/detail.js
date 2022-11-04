@@ -44,7 +44,9 @@ export const Detail = () => {
           <h2>
             {activity.name}
           </h2>
-          <i className="fa fa-star"></i>5
+          <span className="rating-detail"><i className="fa fa-star"></i>
+              {Math.round(activity.reviewMeta?.avgRating * 100) / 100}
+            </span>                 
           <p className="description">
             {activity.blurbs[1].value}
           </p>
