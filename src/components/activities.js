@@ -47,7 +47,8 @@ export const Activities = ({ activityListings, loading }) => {
       <h1>Activities</h1>
       </div>
 
-    <div className="categories">
+    <div className="categories">  
+
         <span>
         <img src="/hiker.svg"></img>
         <img src="/mountain.svg"></img>
