@@ -29,10 +29,12 @@ export const Detail = () => {
     return timeS;
   }
 
-  let description = activity.blurbs.find(e => e.key === "DESCRIPTION").value;
-  let highlights = activity.blurbs.find(e => e.key === "HIGHLIGHTS").value;
-  let included = activity.blurbs.find(e => e.key === "INCLUDED").value
-  let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW").value
+
+  let cancellation = activity.blurbs.find(e => e.key === "CANCELLATION")?.value;
+  let description = activity.blurbs.find(e => e.key === "DESCRIPTION")?.value;
+  let highlights = activity.blurbs.find(e => e.key === "HIGHLIGHTS")?.value;
+  let included = activity.blurbs.find(e => e.key === "INCLUDED")?.value
+  let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW")?.value
 
   return (
     <div>
@@ -56,7 +58,7 @@ export const Detail = () => {
               <ul><img src="/clock.svg" /><b>Duration:</b> {time(duration)}</ul>
             </span>
             <span>
-            <ul><img src="/cancel.svg"/><b>Cancellation:</b> {activity.blurbs[0].value}</ul>
+            <ul><img src="/cancel.svg"/><b>Cancellation:</b> {cancellation}</ul>
             </span>
           </div>
           <div className="details">
