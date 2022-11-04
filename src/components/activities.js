@@ -6,6 +6,7 @@ import { useNavigate, useEffect } from "react-router-dom";
 
 export const Activities = ({ activityListings, loading }) => {
 
+  // GETTING OBJECT TO DISPLAY ON DETAIL PAGE
   let navigate = useNavigate();
   const getActivity = (activity) => {
     navigate(`/detail/`, { state: { activity: activity} });
@@ -68,6 +69,7 @@ export const Activities = ({ activityListings, loading }) => {
           if (description.split(' ')[0] === "-") {
             description = description.replace('-', '');
           }
+          
           return (
             <Card key={activity.name}>
               <Card.Body>
