@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import ActivitiesOne from './activities_page_1.json';
 import ActivitiesTwo from './activities_page_2.json';
@@ -7,7 +7,6 @@ import ActivitiesFour from './activities_page_4.json';
 import ActivitiesFive from './activities_page_5.json';
 import { Activities } from './components/activities';
 import { Pagination } from './components/pagination';
-import { Navigation } from './components/navigation';
 
 function App() {
 
@@ -36,7 +35,6 @@ function App() {
   return (
     <>
     <div>
-      <Navigation />
       <Activities activityListings={currentActivities} loading={loading} />
       <Pagination activitiesPerPage={activitiesPerPage} totalActivities={activityListings.length} paginate={paginate}/>
     </div>

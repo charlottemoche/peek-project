@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from 'react-bootstrap/Carousel';
@@ -69,7 +69,7 @@ export const Activities = ({ activityListings, loading }) => {
           if (description.split(' ')[0] === "-") {
             description = description.replace('-', '');
           }
-          
+
           return (
             <Card key={activity.name}>
               <Card.Body>

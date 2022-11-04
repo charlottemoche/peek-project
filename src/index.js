@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { Detail } from './components/detail';
+import { Navigation } from './components/navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <React.StrictMode>
     <BrowserRouter>
+      <Navigation />
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="/detail" element={<Detail />} />
@@ -20,7 +22,6 @@ root.render(
   </React.StrictMode>
   </>
 );
-
 
 
 // If you want to start measuring performance in your app, pass a function
