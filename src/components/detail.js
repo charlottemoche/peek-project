@@ -29,6 +29,7 @@ export const Detail = () => {
     return timeS;
   }
 
+  let description = activity.blurbs.find(e => e.key === "DESCRIPTION").value;
   let highlights = activity.blurbs.find(e => e.key === "HIGHLIGHTS").value;
   let included = activity.blurbs.find(e => e.key === "INCLUDED").value
   let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW").value
@@ -48,7 +49,7 @@ export const Detail = () => {
               {Math.round(activity.reviewMeta?.avgRating * 100) / 100}
             </span>                 
           <p className="description">
-            {activity.blurbs[1].value}
+            {description}
           </p>
           <div className="info-box">
             <span>
