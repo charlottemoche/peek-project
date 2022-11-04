@@ -29,9 +29,9 @@ export const Detail = () => {
     return timeS;
   }
 
-  let highlights = activity.blurbs[2].value;
-  let included = activity.blurbs[3].value;
-  let toKnow = activity.blurbs[4].value;
+  let highlights = activity.blurbs.find(e => e.key === "HIGHLIGHTS").value;
+  let included = activity.blurbs.find(e => e.key === "INCLUDED").value
+  let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW").value
 
   return (
     <div>
