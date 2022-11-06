@@ -13,7 +13,6 @@ export const Activities = ({ activityListings, loading }) => {
     window.scrollTo(0, 0, 'auto');
   }
 
-
   let trending = activityListings.slice(0, 5);
 
   if (loading) {

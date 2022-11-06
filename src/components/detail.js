@@ -36,6 +36,22 @@ export const Detail = () => {
   let included = activity.blurbs.find(e => e.key === "INCLUDED")?.value
   let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW")?.value
 
+  if(!cancellation) {
+    cancellation = "N/A";
+  }
+
+  if(!toKnow) {
+    toKnow = "N/A";
+  }
+
+  if(!highlights) {
+    highlights = "N/A";
+  }
+
+  if(!description) {
+    description = "";
+  }
+
   return (
     <div>
       <>
