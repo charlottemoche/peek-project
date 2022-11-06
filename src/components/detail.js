@@ -67,7 +67,7 @@ export const Detail = () => {
               Highlights
             </h3>
             <p>
-            {highlights.split("\n").map((i, key) => {
+            {highlights?.split("\n").map((i, key) => {
             if (i.split(' ')[0] === "-") {
               i = i.replace('-', '');
             }
@@ -76,12 +76,11 @@ export const Detail = () => {
             </p>
             </div>
             <div className="info-box">
-              
             <h3>
               Included
             </h3>
             <div>
-            {included.split("\n").map((i, key) => {
+            {included?.split("\n").map((i, key) => {
             if (i.split(' ')[0] === "-") {
               i = i.replace('-', '');
             }
@@ -93,7 +92,7 @@ export const Detail = () => {
               To Know
             </h3>
             <p>
-            {toKnow.split("\n").map((i, key) => {
+            {toKnow?.split("\n").map((i, key) => {
             if (i.split(' ')[0] === "-") {
               i = i.replace('-', '');
             }
