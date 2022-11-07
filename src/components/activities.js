@@ -7,8 +7,8 @@ export const Activities = ({ activityListings, loading }) => {
 
   // GETTING OBJECT TO DISPLAY ON DETAIL PAGE
   let navigate = useNavigate();
-  const getActivity = (activity) => {
-    navigate(`/detail/`, { state: { activity: activity} });
+  const getActivity = async (activity) => {
+    await navigate(`/detail/`, { state: { activity: activity} });
     window.scrollTo(0, 0, 'auto');
   }
 
@@ -41,7 +41,7 @@ export const Activities = ({ activityListings, loading }) => {
       </Carousel>
       </div>
 
-      <div className="activity-container">
+      <div id="activity-container" className="activity-container">
       <h1>Activities</h1>
       </div>
 
@@ -59,7 +59,7 @@ export const Activities = ({ activityListings, loading }) => {
 
     </div>
 
-    <div className="activities-container">
+    <div id="activities-container" className="activities-container">
       {
         activityListings.map(activity => {         
          

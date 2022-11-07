@@ -8,12 +8,11 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
     pageNumbers.push(i);
   }
 
-  function scroll(number) {
-    paginate(number);
-    setTimeout(function () {
-      // ONLY SCROLL TO ACTIVITIES
-      window.scrollTo(0, 600);
-    }, 2);
+
+  const scroll = async (number) => {
+    await paginate(number);
+    let element = document.getElementById("activity-container");
+    element.scrollIntoView();
   }
 
   return (
@@ -21,9 +20,9 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
       <ul className="pagination">
         {pageNumbers.map(number => (
           <li key={number} className="page-item">
-            <a onClick={() => scroll(number)} href="#" className="page-link">
+            <button onClick={() => scroll(number)} className="page-link">
               {number}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
