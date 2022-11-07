@@ -55,7 +55,7 @@ export const Detail = () => {
     description = "";
   }
 
-  if(priceFrom == priceTo) {
+  if(priceFrom === priceTo) {
     priceRange = priceFrom;
   }
 
