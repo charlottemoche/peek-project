@@ -283,7 +283,7 @@ h1 {
 .activities-container {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   gap: 1.2em;
   padding: 0 10em;
 }
