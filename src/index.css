@@ -322,6 +322,13 @@ h1 {
   font-size: 24px;
 }
 
+.prices {
+  position: absolute;
+  bottom: .8em;
+  left: 1em;
+  border-radius: 10px;
+}
+
 /* PAGINATION */
 
 .pagination {
