@@ -426,7 +426,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 750px) {
   .activities-container {
     padding: 1em 2em;
     grid-template-columns: auto;
