@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from 'react-bootstrap/Carousel';
-import { useNavigate, useEffect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Activities = ({ activityListings, loading }) => {
 
@@ -49,13 +48,13 @@ export const Activities = ({ activityListings, loading }) => {
     <div className="categories">  
 
         <span>
-        <img src="/hiker.svg"></img>
-        <img src="/mountain.svg"></img>
-        <img src="/water.svg"></img>
-        <img src="/city.svg"></img>
-        <img src="/food.svg"></img>
-        <img src="/boat.svg"></img>
-        <img src="/crafts.svg"></img>
+        <img src="/hiker.svg" alt="hiker"></img>
+        <img src="/mountain.svg" alt="mountain"></img>
+        <img src="/water.svg" alt="water"></img>
+        <img src="/city.svg" alt="city"></img>
+        <img src="/food.svg" alt="food"></img>
+        <img src="/boat.svg" alt="boat"></img>
+        <img src="/crafts.svg" alt="crafts"></img>
         </span>
 
     </div>

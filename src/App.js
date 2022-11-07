@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import ActivitiesOne from './activities_page_1.json';
 import ActivitiesTwo from './activities_page_2.json';
@@ -19,8 +19,11 @@ function App() {
   // PUT FILES INTO ONE OBJECT
   let activityListings = [fileOne, fileTwo, fileThree, fileFour, fileFive].flat();
   
-  const [activities, setActivities] = useState(activityListings);
-  const [loading, setLoading] = useState(false);
+  // LOAD POSTS AT ONCE AND THEN PAGINATE
+  const [activities] = useState(activityListings);
+  // SET TO FALSE BY DEFAULT
+  const [loading] = useState(false);
+  // BEGIN ON PAGE 1 BY DEFAULT
   const [currentPage, setCurrentPage] = useState(1);
   const activitiesPerPage = 30;
 

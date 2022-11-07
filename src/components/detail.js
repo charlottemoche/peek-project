@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const Detail = () => {
@@ -66,7 +65,7 @@ export const Detail = () => {
         <button className="activity-detail-back" onClick={routeChange}>Back to Activities</button>
         <div className="activity-detail-container">
         <div className="activity-detail-1">
-          <img src={activity.images[0]}></img>
+          <img src={activity.images[0]} alt={activity.name}></img>
           <h2>
             {activity.name}
           </h2>
@@ -78,13 +77,13 @@ export const Detail = () => {
           </p>
           <div className="info-box">
             <span>
-            <ul><img src="/price.svg"/><b>Price:</b> {priceRange}</ul>
+            <ul><img src="/price.svg" alt="dollar" /><b>Price:</b> {priceRange}</ul>
             </span>
             <span>
-              <ul><img src="/clock.svg" /><b>Duration:</b> {time(duration)}</ul>
+              <ul><img src="/clock.svg" alt="clock" /><b>Duration:</b> {time(duration)}</ul>
             </span>
             <span>
-            <ul><img src="/cancel.svg"/><b>Cancellation:</b> {cancellation}</ul>
+            <ul><img src="/cancel.svg" alt="cancel" /><b>Cancellation:</b> {cancellation}</ul>
             </span>
           </div>
           <div className="details">
@@ -126,7 +125,7 @@ export const Detail = () => {
             })}
             </p>
             </div>
-          <img src="/map-placeholder.png"></img>
+          <img src="/map-placeholder.png" alt="map"></img>
         </div>
 
         <div className="activity-detail-2">
