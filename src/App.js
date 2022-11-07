@@ -22,7 +22,7 @@ function App() {
   const [activities, setActivities] = useState(activityListings);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const activitiesPerPage = 28;
+  const activitiesPerPage = 30;
 
   // GET CURR POSTS
   const indexOfLastActivity = currentPage * activitiesPerPage;
