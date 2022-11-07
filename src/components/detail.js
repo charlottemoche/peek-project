@@ -33,8 +33,11 @@ export const Detail = () => {
   let cancellation = activity.blurbs.find(e => e.key === "CANCELLATION")?.value;
   let description = activity.blurbs.find(e => e.key === "DESCRIPTION")?.value;
   let highlights = activity.blurbs.find(e => e.key === "HIGHLIGHTS")?.value;
-  let included = activity.blurbs.find(e => e.key === "INCLUDED")?.value
-  let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW")?.value
+  let included = activity.blurbs.find(e => e.key === "INCLUDED")?.value;
+  let toKnow = activity.blurbs.find(e => e.key === "TO_KNOW")?.value;
+  let priceFrom = activity.priceRange.from?.formatted;
+  let priceTo = activity.priceRange.to?.formatted;
+  let priceRange = priceFrom + " - " + priceTo; 
 
   if(!cancellation) {
     cancellation = "N/A";
@@ -50,6 +53,10 @@ export const Detail = () => {
 
   if(!description) {
     description = "";
+  }
+
+  if(priceFrom == priceTo) {
+    priceRange = priceFrom;
   }
 
   return (
@@ -70,6 +77,9 @@ export const Detail = () => {
             {description}
           </p>
           <div className="info-box">
+            <span>
+            <ul><img src="/price.svg"/><b>Price:</b> {priceRange}</ul>
+            </span>
             <span>
               <ul><img src="/clock.svg" /><b>Duration:</b> {time(duration)}</ul>
             </span>
