@@ -79,14 +79,14 @@ export const Activities = ({ activityListings, loading }) => {
                 <Card.Subtitle className="mb-2 text-muted">
                   {description.split(' ').slice(0, 10).join(' ') + ( " ...")}
                   </Card.Subtitle>
-                  <div className="card-bottom">
-                  <div className="prices"><b>Starting at: </b>{priceRange}</div>
-                  <span className="rating">
-                  <i className="fa fa-star"></i>
-                  {Math.round(activity.reviewMeta?.avgRating * 100) / 100}
-                  </span>       
-                  </div>          
                   <br></br>
+                  <div className="card-bottom-container">
+                    <div className="card-bottom">
+                      <div className="flex1"><b>Starting at: </b>{priceRange}</div>
+                      <div className="flex2"> <i className="fa fa-star"></i>
+                      {Math.round(activity.reviewMeta?.avgRating * 100) / 100}</div>
+                      </div>   
+                  </div>
                 <Card.Text className="card-location">
                   {activity.primaryRegion?.name}
                 </Card.Text>

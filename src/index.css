@@ -29,12 +29,6 @@ h1 {
   color: #1d7e89;
 }
 
-.rating {
-  position: absolute;
-  bottom: .8em;
-  right: 1em;
-}
-
 /* NAVBAR */
 
 .navbar-static {
@@ -322,11 +316,26 @@ h1 {
   font-size: 24px;
 }
 
-.prices {
+.card-bottom-container {
+  background-color: white;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.card-bottom {
+  padding: .5em;
+  border-radius: 5px;
   position: absolute;
-  bottom: .8em;
-  left: 1em;
-  border-radius: 10px;
+  width: 90%;
+  bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(29, 126, 137, 0.1);
+  border: 1px solid #1d7e89;
+}
+
+.flex2 {
+  margin-left: auto;
 }
 
 /* PAGINATION */
