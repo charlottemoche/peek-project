@@ -11,6 +11,7 @@ export const Pagination = ({activitiesPerPage, totalActivities, paginate}) => {
   function scroll(number) {
     paginate(number);
     setTimeout(function () {
+      // ONLY SCROLL TO ACTIVITIES
       window.scrollTo(0, 600);
     }, 2);
   }
