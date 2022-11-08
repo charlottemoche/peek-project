@@ -10,7 +10,6 @@ export const Detail = () => {
   }
 
   const { state: { activity } = {} } = useLocation();
-  // console.log(activity);
   
   let duration = activity.durationMinutesMax;
   function time(n) {
@@ -61,7 +60,7 @@ export const Detail = () => {
   return (
     <div>
       <>
-      <div className="activity-detail">
+      <div id="detail" className="activity-detail">
         <button className="activity-detail-back" onClick={routeChange}>Back to Activities</button>
         <div className="activity-detail-container">
         <div className="activity-detail-1">

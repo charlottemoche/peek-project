@@ -5,7 +5,7 @@ export const Navigation = () => {
 
   return (
     <>
-    <div className="navbar-static">
+    <div id="nav" className="navbar-static">
       <Link to="/">
       <img className="logo" src="./peek-logo.png" alt="" />
       </Link>

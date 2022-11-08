@@ -9,7 +9,8 @@ export const Activities = ({ activityListings, loading }) => {
   let navigate = useNavigate();
   const getActivity = async (activity) => {
     await navigate(`/detail/`, { state: { activity: activity} });
-    window.scrollTo(0, 0, 'auto');
+    let element = document.getElementById("nav");
+    element.scrollIntoView();
   }
 
   let trending = activityListings.slice(0, 5);
